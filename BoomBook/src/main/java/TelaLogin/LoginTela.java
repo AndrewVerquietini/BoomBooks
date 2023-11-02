@@ -1,11 +1,9 @@
 package TelaLogin;
 
+import TelaAdmin.TelaPrincipalAdmin;
 import BD.ConexaoBD;
 import Tela.TelaPrincipalComum;
-import TelaAdmin.TelaPrincipalAdmin;
 import java.util.List;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -16,20 +14,6 @@ private List<Usuario> usuariosCadastrados = new ArrayList<>();
 
     public LoginTela() {
         initComponents();   
-        
-        btnLogin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                validarLogin();
-            }
-        });
-        
-        btnCadastro.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                cadastrarUsuario();
-            }
-        });
     }
 
     @SuppressWarnings("unchecked")
@@ -141,10 +125,13 @@ private List<Usuario> usuariosCadastrados = new ArrayList<>();
 
     private void btnCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroActionPerformed
         // TODO add your handling code here:
+        cadastrarUsuario();
     }//GEN-LAST:event_btnCadastroActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
+        validarLogin();
+        
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void GeneroCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneroCadastroActionPerformed

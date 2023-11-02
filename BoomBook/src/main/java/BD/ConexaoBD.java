@@ -38,7 +38,7 @@ public class ConexaoBD {
             Connection conexao = obterConexao();
             
             // Execute a consulta SQL para verificar as credenciais de usuário comum
-            String query = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
+            String query = "SELECT * FROM usuario WHERE email = ? AND senha = ? AND tipo NOT LIKE 'admin' OR tipo IS NULL";
             PreparedStatement stmt = conexao.prepareStatement(query);
             stmt.setString(1, email);
             stmt.setString(2, senha);
