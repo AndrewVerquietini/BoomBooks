@@ -179,14 +179,12 @@ private List<Usuario> usuariosCadastrados = new ArrayList<>();
         ConexaoBD conexaoBD = new ConexaoBD();
 
         if (conexaoBD.validarLoginComum(email, senha)) {
-            // Login de usuário comum bem-sucedido, você pode redirecionar para a tela de usuário comum.
-            // Por exemplo, você pode abrir a TelaUsuarioComum:
+          
             TelaPrincipalComum telaUsuarioComum = new TelaPrincipalComum();
             telaUsuarioComum.setVisible(true);
             this.dispose(); // Fecha a tela de login
         } else if (conexaoBD.validarLoginAdmin(email, senha)) {
-            // Login de administrador bem-sucedido, você pode redirecionar para a tela de administrador.
-            // Por exemplo, você pode abrir a TelaAdmin:
+
             TelaPrincipalAdmin telaAdmin = new TelaPrincipalAdmin();
             telaAdmin.setVisible(true);
             this.dispose(); // Fecha a tela de login
