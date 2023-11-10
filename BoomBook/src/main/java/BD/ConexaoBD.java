@@ -69,6 +69,26 @@ public class ConexaoBD {
         }
     }
     
+     public void inserirLivro(Livro livro) throws SQLException {
+        Connection conexao = obterConexao();
+        PreparedStatement stmt = null;
+        
+        
+        try  {
+            String sql = "INSERT INTO livros (titulo, autor, comentario, nota) VALUES (?, ?, ?, ?)";
+            stmt = conexao.prepareStatement(sql);
+            
+            stmt.setString(1, livro.getTitulo());
+            stmt.setString(2, livro.getAutor());
+            stmt.setString(3, livro.getComentario());
+            stmt.setInt(4, livro.getAvaliacoes().isEmpty() ? 0 : livro.getAvaliacoes().get(0).getNota());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
     public static void inserirUsuario(Usuario usuario) throws SQLException {
         Connection conexao = null;
         PreparedStatement stmt = null;
@@ -94,6 +114,7 @@ public class ConexaoBD {
             }
         }
     }
+    
     
     public void desconectar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

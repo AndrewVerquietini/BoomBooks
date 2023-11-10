@@ -54,5 +54,4 @@ public class Usuario {
     public int getIdade() {
         return idade;
     }
- 
 }
