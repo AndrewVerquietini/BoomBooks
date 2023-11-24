@@ -24,97 +24,111 @@ private List<Usuario> usuariosCadastrados = new ArrayList<>();
         jLabel2 = new javax.swing.JLabel();
         EmailLogin = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
-        EmailCadastro = new javax.swing.JFormattedTextField();
         jLabel4 = new javax.swing.JLabel();
+        EmailCadastro = new javax.swing.JFormattedTextField();
         SenhaLogin = new javax.swing.JPasswordField();
         SenhaCadastro = new javax.swing.JPasswordField();
-        jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        ImagemBack = new javax.swing.JLabel();
         btnCadastro = new javax.swing.JButton();
-        NomeCadastro = new javax.swing.JFormattedTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        GeneroCadastro = new javax.swing.JFormattedTextField();
+        NomeCadastro = new javax.swing.JFormattedTextField();
         jLabel10 = new javax.swing.JLabel();
+        GeneroCadastro = new javax.swing.JFormattedTextField();
         btnLogin = new javax.swing.JButton();
         IdadeCadastro = new javax.swing.JFormattedTextField();
+        ImagemBack = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1100, 607));
+        setMinimumSize(new java.awt.Dimension(762, 612));
+        setPreferredSize(new java.awt.Dimension(762, 612));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Login");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Cadastro");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
 
         EmailLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EmailLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(EmailLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 191, -1));
+        getContentPane().add(EmailLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 191, -1));
 
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("E-mail:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
-        getContentPane().add(EmailCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 191, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Gênero:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 250, -1, -1));
-        getContentPane().add(SenhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 191, -1));
-        getContentPane().add(SenhaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 170, 191, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, -1, -1));
+        getContentPane().add(EmailCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 191, -1));
+        getContentPane().add(SenhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 191, -1));
+        getContentPane().add(SenhaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, 191, -1));
 
-        jLabel6.setText("Senha:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
-
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Senha:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 170, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, -1, -1));
+
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Senha:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 355, -1, -1));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 347, -1, -1));
 
-        ImagemBack.setIcon(new javax.swing.ImageIcon("C:\\Users\\andre\\Documents\\Projeto  A3\\BoomBooks\\BoomBooks\\BoomBook\\src\\main\\resources\\imagens\\BackGround.png")); // NOI18N
-        getContentPane().add(ImagemBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 610));
-
+        btnCadastro.setBackground(new java.awt.Color(0, 0, 0));
+        btnCadastro.setForeground(new java.awt.Color(0, 0, 0));
         btnCadastro.setText("Cadastrar");
         btnCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastroActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 290, -1, -1));
-        getContentPane().add(NomeCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, 191, -1));
+        getContentPane().add(btnCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, -1, -1));
 
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Nome:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 90, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("E-mail:");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 130, -1, -1));
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, -1));
+        getContentPane().add(NomeCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 191, -1));
 
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Idade:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, -1, -1));
+
+        GeneroCadastro.setToolTipText("");
         GeneroCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GeneroCadastroActionPerformed(evt);
             }
         });
-        getContentPane().add(GeneroCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 191, -1));
+        getContentPane().add(GeneroCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, 191, -1));
 
-        jLabel10.setText("Idade:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 210, -1, -1));
-
+        btnLogin.setBackground(new java.awt.Color(0, 0, 0));
+        btnLogin.setForeground(new java.awt.Color(0, 0, 0));
         btnLogin.setText("Logar");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
-        getContentPane().add(IdadeCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 210, 191, -1));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, -1));
+        getContentPane().add(IdadeCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 191, -1));
+
+        ImagemBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pngegg.png"))); // NOI18N
+        getContentPane().add(ImagemBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
