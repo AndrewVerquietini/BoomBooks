@@ -84,17 +84,13 @@ public class TelaPrincipalComum extends JFrame {
         lblNota.setFont(labelFont);
         JTextField txtNota = new JTextField();
 
-        // Adicionando ícones aos botões
-        ImageIcon cadastrarIcon = new ImageIcon("cadastrar.png");
-        JButton btnCadastrar = new JButton("Cadastrar Livro", cadastrarIcon);
+        JButton btnCadastrar = new JButton("Cadastrar Livro");
         btnCadastrar.setBackground(buttonColor);
 
-        ImageIcon visualizarIcon = new ImageIcon("visualizar.png");
-        JButton btnVisualizarPorNota = new JButton("Visualizar por Nota", visualizarIcon);
+        JButton btnVisualizarPorNota = new JButton("Visualizar por Nota");
         btnVisualizarPorNota.setBackground(buttonColor);
 
-        ImageIcon loginIcon = new ImageIcon("login.png");
-        JButton btnTelaLogin = new JButton("Tela de Login", loginIcon);
+        JButton btnTelaLogin = new JButton("Tela de Login");
         btnTelaLogin.setBackground(buttonColor);
 
         areaResultado = new JTextArea();
@@ -216,7 +212,17 @@ public class TelaPrincipalComum extends JFrame {
     }
 
     private void ordenarLivrosByNota() {
-        listaLivros.sort((livro1, livro2) -> Integer.compare(livro2.getNota(), livro1.getNota()));
+        listaLivros.sort((livro1, livro2) -> {
+            // Primeiro, compare as notas
+            int comparacaoNotas = Integer.compare(livro2.getNota(), livro1.getNota());
+
+            // Se as notas forem iguais, compare as primeiras letras dos títulos
+            if (comparacaoNotas == 0) {
+                return Character.compare(livro1.getTitulo().charAt(0), livro2.getTitulo().charAt(0));
+            } else {
+                return comparacaoNotas;
+            }
+        });
     }
 
     private void exibirLivros() {
